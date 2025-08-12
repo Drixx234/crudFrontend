@@ -5,10 +5,10 @@ export async function getCategories(){
     return res.json();
 }
  
-export async function createCategory(){
+export async function createCategory (data){//"data" son los datos que se guardan
     await fetch(`${API_URL}/newCategory`,{
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
     });
 }
